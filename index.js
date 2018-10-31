@@ -3,7 +3,7 @@ var gameSquares = [];
 var firstSquare = null;
 
 var colors = [];
-for (var i=0; i < 10; i++) {
+for (var i = 0; i < 10; i++) {
     colors.push('square-' + i);
 }
 
@@ -18,7 +18,7 @@ function getSomeColors() {
         var index = random(colorscopy.length);
         randomColors.push(colorscopy.splice(index, 1)[0]);
     }
-    return  randomColors.concat(randomColors.slice());
+    return randomColors.concat(randomColors.slice());
 }
 
 function randomizeColors() {
@@ -36,6 +36,7 @@ function GameSquare(el, color) {
     this.el.addEventListener("click", this, false);
     this.setColor(color);
 }
+
 function setupGame() {
     var array = document.getElementsByClassName("game-square");
     var randomColors = getSomeColors();
@@ -83,12 +84,12 @@ resetButton.onclick = function() {
 GameSquare.prototype.handleEvent = function(e) {
     switch (e.type) {
         case "click":
-        if (this.isOpen || this.isLocked) {
-            return;
-        }
-        this.isOpen = true;
-        this.el.classList.add('flip');
-        checkGame(this);
+            if (this.isOpen || this.isLocked) {
+                return;
+            }
+            this.isOpen = true;
+            this.el.classList.add('flip');
+            checkGame(this);
     }
 }
 GameSquare.prototype.reset = function() {

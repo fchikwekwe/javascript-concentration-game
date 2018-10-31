@@ -1,4 +1,3 @@
-
 .game-square {
     box-sizing: border-box;
     border: 1px solid #000;
@@ -7,52 +6,67 @@
     position: relative;
     overflow: hidden;
 }
-.game-square > div {
+
+.game-square>div {
     width: 100%;
     height: 200%;
     position: absolute;
     top: 0;
     transition: 400ms;
 }
-.game-square > div > div {
+
+.game-square>div>div {
     height: 50%;
 }
-.game-square > div > div:first-child {
+
+.game-square>div>div:first-child {
     background-color: gray;
 }
-.flip > div {
+
+.flip>div {
     top: -100%
 }
+
 .square-0 {
     background-color: aqua;
 }
+
 .square-1 {
     background-color: bisque;
 }
+
 .square-2 {
     background-color: blue;
 }
+
 .square-3 {
     background-color: blueviolet;
 }
+
 .square-4 {
     background-color: brown;
 }
+
 .square-5 {
     background-color: cadetblue;
 }
+
 .square-6 {
     background-color: chartreuse;
 }
+
 .square-7 {
     background-color: chocolate;
 }
+
 .square-8 {
     background-color: coral;
 }
+
 .square-9 {
     background-color: cornflowerblue;
 }
+
 #game {
     width: 400px;
     height: 400px;
